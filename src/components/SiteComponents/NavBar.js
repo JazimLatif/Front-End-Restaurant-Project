@@ -19,8 +19,13 @@ function NavBar({ loggedInUser, onLogOut }) {
                 :
                 <a href="/LogIn">Log In</a>
             }
-
-            <a href="/LeaveAReview">Leave a Review!</a>
+            
+            {loggedInUser ?
+                <a href="/LeaveAReview">Leave a Review!</a>
+                :
+                <a href="/LogIn">Leave a Review!</a>
+            }
+            
             
             <a href="#Footer">Contact Us</a>
         </div>
