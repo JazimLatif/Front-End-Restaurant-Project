@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: rgb(245, 113, 6);
 }
 
 .App-logo {
@@ -36,4 +35,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Light Mode Styles */
+
+.bg-light {
+  background-color: #ff781f;
+}
+
+.heading-light {
+  color: #222;
+}
+
+.para-light {
+  color: #222;
+}
+
+.btn-light {
+  background-color: #222;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Dark Mode Styles */
+
+.bg-dark {
+  background-color: #222;
+}
+
+.heading-dark {
+  color: #fff;
+}
+
+.para-dark {
+  color: #fff;
+}
+
+.btn-dark {
+  background-color: #fff;
+  color: #222;
+
 }

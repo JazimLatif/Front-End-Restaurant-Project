@@ -11,7 +11,7 @@ const PopupCard = ({ restaurant, onClick, show }) => {
       <div className={showHideClassName}>
         <section className="popup-main">
           
-          <button onClick={onClick}>Close</button>
+          <button className="btn" onClick={onClick}>X</button>
           
           <div>
           <h3>Name:</h3>
