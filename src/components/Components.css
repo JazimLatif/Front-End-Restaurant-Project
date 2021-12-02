@@ -13,6 +13,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.restaurantCard:hover{
+  cursor: pointer;
+}
 .filter{
   color:black;
   display: flex;
@@ -48,7 +52,7 @@
     display: block;
     max-width:230px;
     max-height:95px;
-    width: auto;
+    width: 130px;
     height: auto;
 
 }
@@ -184,7 +188,7 @@
     padding: 6px 12px 6px 12px;
     border: solid black 3px;
     text-decoration: none;
-    position:absolute;
+    position:inherit;
     
   }
 
