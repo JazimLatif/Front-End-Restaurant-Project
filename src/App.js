@@ -45,12 +45,13 @@ function App() {
 
   return (
 <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
+
     <Router>
     <div className="App"> 
     <NavBar loggedInUser={loggedInUser} onLogOut={onLogOut}/>
+    
     <div className="content">
 
-      
       <Switch>
         <Route path="/" exact>
         <HomeContainer/>
@@ -67,9 +68,7 @@ function App() {
         </Route>
       </Switch>
 
-      <div>
-        <About/>
-      </div>
+     
 
       <div className="footer" id="Footer">
       <Footer/>
