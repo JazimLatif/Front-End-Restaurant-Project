@@ -11,6 +11,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import SwitchButton from "./Button";
+import About from './components/About';
 
 
 function getSessionStorageOfDefault(key, defaultValue) {
@@ -60,17 +61,19 @@ function App() {
           <LogIn onLogIn={onLogIn}/>
         
         </Route>
-       
+
         <Route path="/LeaveAReview">
           <ReviewContainer/>
         </Route>
       </Switch>
-      
 
+      <div>
+        <About/>
       </div>
-      
+
       <div className="footer" id="Footer">
       <Footer/>
+      </div>
       </div>
       </div>
       </Router>
