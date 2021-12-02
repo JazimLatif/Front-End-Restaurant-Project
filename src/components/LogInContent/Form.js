@@ -43,6 +43,7 @@ const Form = ({ onLogIn }) => {
                 <div className="formElement">
                     <input type="submit" value="Next" />
                 </div>
+                
             </form>
         </div>
     )

@@ -2,7 +2,7 @@ import * as React from 'react';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
+import SwitchButton from '../../Button'
 export default function CheckboxLabels({updateHalalFilter, updateGlutenFreeFilter, updateVegetarianFilter}) {
   return ( 
     <div className = "filter">
@@ -10,6 +10,7 @@ export default function CheckboxLabels({updateHalalFilter, updateGlutenFreeFilte
       <FormControlLabel control={<Checkbox />} onChange={updateHalalFilter} label="Halal" />
       <FormControlLabel control={<Checkbox />} onChange={updateVegetarianFilter} label="Vegetarian" />
       <FormControlLabel control={<Checkbox />} onChange={updateGlutenFreeFilter} label="Gluten Free" />
+      <SwitchButton />
     </FormGroup>
     </div>
   ); 

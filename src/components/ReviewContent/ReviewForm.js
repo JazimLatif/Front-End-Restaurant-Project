@@ -46,9 +46,9 @@ const ReviewForm = ({restaurants , reviewSubmit }) =>{
 
     
     return(
-
-    <form onSubmit={onReviewSubmit}>
     <div className="reviewPageForm"> 
+    <form onSubmit={onReviewSubmit}>
+
     <h2>Thanks for visiting, please leave a review for the selected Restaurant using the slider and comment field below!</h2>
 
     <select onChange={updateDrop}>
@@ -87,8 +87,12 @@ const ReviewForm = ({restaurants , reviewSubmit }) =>{
 
     <p>Leave a Comment:</p><input type="text" onChange={updateComment}/>
     <input type="submit" value="submit" />
-    </div>
+    
+    
+
     </form>
+    <img src="https://www.thenews.com.pk/assets/uploads/akhbar/2021-09-02/886708_5297434_Zahir-Jaffer-seeks-legal-assistance-from-US-authorities_akhbar.jpg"/>
+    </div>
     )
 }
 

@@ -12,7 +12,6 @@ const ReviewCard = ({ review }) => {
             <p>{<Rating value={review.rating} precision={0.1}  readOnly />}</p>
             <h3>Comment:</h3>
             <p>{review.comment}</p>
-            <hr/>
         </div>
         
     )

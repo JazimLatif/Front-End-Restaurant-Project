@@ -74,7 +74,7 @@ function App() {
       </div>
       </div>
       </Router>
-      <SwitchButton />
+
 </div>
 
   );

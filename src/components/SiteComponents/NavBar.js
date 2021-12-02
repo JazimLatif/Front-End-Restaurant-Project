@@ -22,7 +22,6 @@ function NavBar({ loggedInUser, onLogOut }) {
 
             <a href="/LeaveAReview">Leave a Review!</a>
             
-            <a href="https://www.google.com/">Wish List</a>
             <a href="#Footer">Contact Us</a>
         </div>
     )

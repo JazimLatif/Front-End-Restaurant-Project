@@ -14,7 +14,7 @@ function RestaurantCard({ restaurant, onClick }) {
       case 'Bakery':imageChoice='https://b.zmtcdn.com/data/pictures/chains/1/16574171/1ef75042dcb919b4faaa71b23030d7aa.jpg?fit=around|750:500&crop=750:500;*,*'; break;
       case 'Chinese':imageChoice='https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000442/img/basic/a0000442_main.jpg?20170412180838&q=80&rw=750&rh=536'; break;
       case 'Indian':imageChoice='https://www.theshaftesbury.com/blog/wp-content/uploads/2017/08/Indian-takeaway-at-a-Londons-market.jpg'; break;
-      case 'Hamburger':imageChoice='https://cdn.discordapp.com/attachments/913726718169194496/914897116453826620/unknown.png'; break;
+      case 'Hamburger':imageChoice=''; break;
       case 'Italian':imageChoice='https://media4.giphy.com/media/iuumSq0ElSFzDK75JF/giphy.gif'; break;
       case 'French':imageChoice='https://www.getflavor.com/wp-content/uploads/2019/01/4-Taureaux-Spread.jpg'; break;
   }
@@ -24,20 +24,20 @@ function RestaurantCard({ restaurant, onClick }) {
 
           <img class="cuisineImage" src={imageChoice} alt='Picture of food'/>
 
-          <h3>Name:</h3>
-          <p>{restaurant.restaurantName}</p>
+          <h3>{restaurant.restaurantName}</h3>
+          
           <h4>Address:</h4>
-          <p>{restaurant.address}</p>
-          <h4>Cuisine:</h4>
-          <p>{restaurant.cuisine}</p>
+          <h4>{restaurant.address}</h4>
+
+          <h4>{restaurant.cuisine}</h4>
           <h4>Price:</h4>
-          <p>{restaurant.price}/5</p>
-          <h4>Vegetarian:</h4>
-          <p>{restaurant.vegetarian ? "Yes" : "No"}</p>
+          <h4>{restaurant.price}/5</h4>
+        <h4>Vegetarian:</h4>
+          {restaurant.vegetarian ? <h3>Ⓥ</h3> : <h4>No</h4>}
           <h4>Halal:</h4>
-          <p>{restaurant.halal ? "Yes" : "No"}</p>
+          <h4>{restaurant.halal ? "Yes" : "No"}</h4>
           <h4>Gluten free?</h4>
-          <p>{restaurant.glutenFree ? "Yes" : "No"}</p>
+          <h4>{restaurant.glutenFree ? "Yes" : "No"}</h4>
 
           {/* <button onClick={() => onQuickView(restaurant.id)}>Review Page</button> */}
           {/* <hr/> */}

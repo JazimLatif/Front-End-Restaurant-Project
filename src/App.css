@@ -41,7 +41,8 @@
 /* Light Mode Styles */
 
 .bg-light {
-  background-color: #ff781f;
+  background: rgb(75,61,96);
+  background: linear-gradient(0deg, rgba(75,61,96,1) 0%, rgba(253,83,94,1) 35%, rgba(252,156,84,1) 100%);
 }
 
 .heading-light {
@@ -62,7 +63,8 @@
 /* Dark Mode Styles */
 
 .bg-dark {
-  background-color: #222;
+  background: rgb(75,61,96);
+  background: linear-gradient(180deg, rgba(75,61,96,1) 0%, rgba(49,21,82,1) 35%, rgba(8,24,58,1) 100%);
 }
 
 .heading-dark {
