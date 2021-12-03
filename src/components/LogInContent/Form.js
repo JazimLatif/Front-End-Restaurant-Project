@@ -1,13 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router";
 
 const Form = ({ onLogIn }) => {
 
     const history = useHistory();
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
+    }
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
     }
 
     const handleLogIn = async (event) => {
@@ -18,32 +23,29 @@ const Form = ({ onLogIn }) => {
         .then(response => response.json())
         .then(data => users = data)
         
-        const userFound = users.find(user => user.email === email)
+        const userFound = users.find(user => user.email === email && user.number === parseInt(password))
         if (userFound) {
             onLogIn(userFound);
-            // setEmail("");
             history.push("/");
         } else {
             setEmail("");
         }
-
     }
 
     return(
         <div>
             <form onSubmit={handleLogIn}>
                 <div className="formElement">
-                    <label > <h1>Username</h1></label>
+                    <label><h1>Username</h1></label>
                     <input type="text" id="email" value={email} onChange={handleEmailChange} />
                 </div>
                 <div className="formElement">
-                    <label > <h1>Password</h1></label>
-                    <input type="password" id="password" />
+                    <label><h1>Password</h1></label>
+                    <input type="password" id="password" value={password} onChange={handlePasswordChange}/>
                 </div>
                 <div className="formElement">
                     <input type="submit" value="Next" />
-                </div>
-                
+                </div>   
             </form>
         </div>
     )
