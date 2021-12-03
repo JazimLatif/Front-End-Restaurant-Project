@@ -8,11 +8,13 @@ import HomeContainer from './containers/HomeContainer';
 import Filter from './components/SiteComponents/Filter';
 import LogIn from './components/LogInContent/LogIn'
 import ReviewContainer from './containers/ReviewContainer';
-import SwitchButton from "./Button";
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeContext } from "./ThemeContext";
+import SwitchButton from "./Button";
+import About from './components/About';
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
 
 function getSessionStorageOfDefault(key, defaultValue) {
   const stored = sessionStorage.getItem(key)
@@ -23,6 +25,7 @@ function getSessionStorageOfDefault(key, defaultValue) {
 }
 
 function App() {
+  
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 

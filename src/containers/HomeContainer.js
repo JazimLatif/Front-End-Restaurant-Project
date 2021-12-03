@@ -1,10 +1,11 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import './Containers.css';
 
 import RestaurantCardList from '../components/RestaurantContent/RestaurantCardList';
 import PopupCard from '../components/SiteComponents/PopupCard';
 import Filter from '../components/SiteComponents/Filter';
+import About from '../components/About';
 
 
 const HomeContainer = () => {
@@ -126,15 +127,19 @@ const HomeContainer = () => {
     
         return restaurants
     }
+
     return(
         <>
             {/* <NewRestaurantForm onRestuarantSubmission={addNewRestaurant}/> */}
             
             <img class ='heroImage' id="HeroImage" src='https://media.discordapp.net/attachments/913726718169194496/914889207376404530/Logo3.png'/>
 
+           
+
             <Filter updateHalalFilter = {updateHalalFilter} halal = {halal} updateVegetarianFilter = {updateVegetarianFilter}
             vegetarian = {vegetarian} updateGlutenFreeFilter = {updateGlutenFreeFilter} glutenFree ={glutenFree} />
 
+<About/>
             <RestaurantCardList restaurants={filterRestaurants()} onClick={selectRestaurant,showPopup}
                 onRestaurantCompletion={updateRestaurantCompletion}/>
 
