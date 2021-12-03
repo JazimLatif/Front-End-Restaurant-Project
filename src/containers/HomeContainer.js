@@ -134,14 +134,12 @@ const HomeContainer = () => {
             
             <img class ='heroImage' id="HeroImage" src='https://media.discordapp.net/attachments/913726718169194496/914889207376404530/Logo3.png'/>
 
-            
-            <div>
-                <About/>
-            </div>
+           
 
             <Filter updateHalalFilter = {updateHalalFilter} halal = {halal} updateVegetarianFilter = {updateVegetarianFilter}
             vegetarian = {vegetarian} updateGlutenFreeFilter = {updateGlutenFreeFilter} glutenFree ={glutenFree} />
 
+<About/>
             <RestaurantCardList restaurants={filterRestaurants()} onClick={selectRestaurant,showPopup}
                 onRestaurantCompletion={updateRestaurantCompletion}/>
 
