@@ -38,7 +38,7 @@ function RestaurantCard({ restaurant, onClick }) {
           </div>
           <div class = "item4">
           <h4>Price:</h4>
-          <h4>{restaurant.price}</h4>
+          <h4>{restaurant.price}/5</h4>
           </div>
           <div class = "item5">
         <h4>Vegetarian:</h4>

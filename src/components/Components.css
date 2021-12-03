@@ -169,10 +169,10 @@
     bottom:95%;
     left: 95%;
     position:absolute;
-    background-color:red;
+    background-color: rgb(250, 70, 70);
   }
   .popup-btn:hover{
-    background-color:darkred;
+    background-color:red;
   }
   .popup-main {
     position:fixed;
