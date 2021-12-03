@@ -1,14 +1,15 @@
+import React, { useContext } from "react";
 import { useState, useEffect } from 'react';
 import './App.css';
-import HomeContainer from './containers/HomeContainer';
+
 import NavBar from './components/SiteComponents/NavBar';
 import Footer from './components/SiteComponents/Footer';
+import HomeContainer from './containers/HomeContainer';
 import Filter from './components/SiteComponents/Filter';
 import LogIn from './components/LogInContent/LogIn'
 import ReviewContainer from './containers/ReviewContainer';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import React, { useContext } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeContext } from "./ThemeContext";
 import SwitchButton from "./Button";
 import About from './components/About';
@@ -31,7 +32,6 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState(
     getSessionStorageOfDefault('loggedInUser', null)
   );
-  // const [loggedInCustomer, setLoggedInCustomer] = useState(null);
 
   useEffect(() => {
     sessionStorage.setItem('loggedInUser', JSON.stringify(loggedInUser))
@@ -46,41 +46,31 @@ function App() {
   }
 
   return (
-<div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
+    <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
+      <Router>
+        <div className="App"> 
+          <NavBar loggedInUser={loggedInUser} onLogOut={onLogOut}/>
 
-    <Router>
-    <div className="App"> 
-    <NavBar loggedInUser={loggedInUser} onLogOut={onLogOut}/>
-    
-    <div className="content">
+          <div className="content">
+            <Switch>
+              <Route path="/" exact>
+                <HomeContainer/>
+              </Route>
+              <Route path="/LogIn">
+                <LogIn onLogIn={onLogIn}/>
+              </Route>
+              <Route path="/LeaveAReview">
+                <ReviewContainer loggedInUser={loggedInUser}/>
+              </Route>
+            </Switch>
+          </div>
 
-      <Switch>
-        <Route path="/" exact>
-        <HomeContainer/>
-        </Route>
-      
-
-        <Route path="/LogIn">
-          <LogIn onLogIn={onLogIn}/>
-        
-        </Route>
-
-        <Route path="/LeaveAReview">
-          <ReviewContainer/>
-        </Route>
-      </Switch>
-
-     
-
-      <div className="footer" id="Footer">
-      <Footer/>
-      </div>
-      </div>
-      </div>
+          <div className="footer" id="Footer">
+            <Footer/>
+          </div>
+        </div>
       </Router>
-
-</div>
-
+    </div>
   );
   
 }
