@@ -1,11 +1,8 @@
 import ReviewForm from '../components/ReviewContent/ReviewForm'
 import {useState, useEffect} from 'react';
 
-
-
-const ReviewContainer = () => {
+const ReviewContainer = ({ loggedInUser }) => {
     const [restaurants, setRestaurants] = useState([]);
-
 
     const getRestaurantData = () => {
         fetch("http://localhost:8080/restaurant/allRestaurants")
@@ -17,7 +14,7 @@ const ReviewContainer = () => {
         getRestaurantData();
     },[]);
 
-    const reviewSubmit =(review) => {
+    const reviewSubmit = (review) => {
         fetch("http://localhost:8080/review", {
             method: 'POST',
             headers: {
@@ -25,30 +22,18 @@ const ReviewContainer = () => {
             },
             body: JSON.stringify(review)
         })
-        .then(getRestaurantData);
-        
+        .then(getRestaurantData);    
     }
 
+    // const selectRestaurants = ()=>{
+    //     const newList = [...restaurants]
+    //     const restaurantToShow = newList.find(restaurants => restaurants.name.length>0);
+    //     setRestaurants(restaurantToShow)
+    // }
 
-    //Get customer ID from props to put in body of post request
-
-    
-
-
-
-    const selectRestaurants = ()=>{
-        const newList = [...restaurants]
-        const restaurantToShow = newList.find(restaurants => restaurants.name.length>0);
-        setRestaurants(restaurantToShow)
-    }
-
-
-
-
-
-        return(
-        <ReviewForm restaurants={restaurants} reviewSubmit={reviewSubmit} />
-        )
-    }
+    return (
+        <ReviewForm restaurants={restaurants} reviewSubmit={reviewSubmit} loggedInUser={loggedInUser}/>
+    )
+}
 
 export default ReviewContainer;

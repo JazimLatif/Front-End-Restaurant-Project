@@ -57,7 +57,7 @@ function App() {
                 <LogIn onLogIn={onLogIn}/>
               </Route>
               <Route path="/LeaveAReview">
-                <ReviewContainer/>
+                <ReviewContainer loggedInUser={loggedInUser}/>
               </Route>
             </Switch>
           </div>
