@@ -13,6 +13,7 @@ import { ThemeContext } from "./ThemeContext";
 import SwitchButton from "./Button";
 import About from './components/About';
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
 
 function getSessionStorageOfDefault(key, defaultValue) {
   const stored = sessionStorage.getItem(key)
@@ -23,6 +24,7 @@ function getSessionStorageOfDefault(key, defaultValue) {
 }
 
 function App() {
+  
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 

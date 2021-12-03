@@ -65,6 +65,7 @@
 .bg-dark {
   background: rgb(75,61,96);
   background: linear-gradient(180deg, rgba(75,61,96,1) 0%, rgba(49,21,82,1) 35%, rgba(8,24,58,1) 100%);
+  color: white
 }
 
 .heading-dark {
@@ -78,5 +79,4 @@
 .btn-dark {
   background-color: #fff;
   color: #222;
-
 }

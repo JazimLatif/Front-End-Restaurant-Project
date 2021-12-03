@@ -1,3 +1,4 @@
+
 .restaurantCard{
   background-color: #dfb1d9;
   display: grid;
@@ -12,13 +13,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1150px;
+  /* align-content: space-around; */
+}
+.item1{
+  align-self: center;
+}
+
+.item3{
+  align-self: center;
 }
 
 .restaurantCard:hover{
   cursor: pointer;
 }
 .filter{
-  color:black;
   display: flex;
   justify-content: flex-end;
   align-content: flex-start;
@@ -36,6 +45,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .restaurantCard:hover{
@@ -51,10 +66,10 @@
 .cuisineImage{
     display: block;
     max-width:230px;
-    max-height:95px;
+    max-height:105px;
     width: 130px;
     height: auto;
-
+    align-self: stretch;
 }
 
 .navBar {
@@ -132,6 +147,7 @@
     display: flex;
     overflow: scroll;
     justify-content: space-around;
+    grid-template-columns: 20% 20% 20%;
   }
   
   .display-block {
@@ -226,3 +242,4 @@
     height: 50%;
     width: auto;
   }
+

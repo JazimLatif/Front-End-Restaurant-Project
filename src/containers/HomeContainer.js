@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import './Containers.css';
 
 import RestaurantCardList from '../components/RestaurantContent/RestaurantCardList';
@@ -127,6 +127,7 @@ const HomeContainer = () => {
     
         return restaurants
     }
+
     return(
         <>
             {/* <NewRestaurantForm onRestuarantSubmission={addNewRestaurant}/> */}
