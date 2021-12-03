@@ -31,7 +31,6 @@ const PopupCard = ({ restaurant, onClick, show }) => {
           <div className="reviewStuff">
           <h4>Reviews:</h4>
           <ReviewCardList reviews={restaurant.reviews} />
-          <b><a href="/LeaveAReview">Leave a Review!</a></b>
           </div>
 
 

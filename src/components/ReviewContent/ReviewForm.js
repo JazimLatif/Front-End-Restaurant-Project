@@ -18,6 +18,7 @@ const ReviewForm = ({ restaurants, reviewSubmit, loggedInUser }) => {
 
   const updateComment = (event) => {
     setComment(event.target.value);
+
   }
 
   const updateDrop = (event) => {
@@ -26,6 +27,7 @@ const ReviewForm = ({ restaurants, reviewSubmit, loggedInUser }) => {
 
   const [value, setValue] = useState(3);
   const [hover, setHover] = useState(-1);
+  
   const [dropSelect, setDropSelect] = useState(null);
   const [comment,setComment] = useState("");
 
@@ -41,8 +43,13 @@ const ReviewForm = ({ restaurants, reviewSubmit, loggedInUser }) => {
       }
 
       // console.log(review)
+
     reviewSubmit(review); 
+    window.location.reload(false);
+
+
   }
+
 
   return (
     <div className="reviewPageForm"> 
@@ -58,23 +65,24 @@ const ReviewForm = ({ restaurants, reviewSubmit, loggedInUser }) => {
         <div className="slider">
         {/* ============================================== Rating mui stuff */}
 
-          <Rating
-            name="hover-feedback"
-            value={value}
-            precision={1}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            onChangeActive={(newHover) => {
-              setHover(newHover);
-            }}
-            icon={<FastfoodIcon />}
-            emptyIcon={<FastfoodIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-          />
+        <Rating
+          name="hover-feedback"
+          value={value}
+          precision={1}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+          onChangeActive={(event, newHover) => {
+            setHover(newHover);
+          }}
+          icon={<FastfoodIcon  />}
+          emptyIcon={<FastfoodIcon style={{ opacity: 0.55 }} fontSize="inherit"/>}
 
-          {value !== null && (
-            <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-          )}
+    />
+
+        {value !== null && (
+          <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+        )}
 
         {/* ====================================================== */}
         </div>
