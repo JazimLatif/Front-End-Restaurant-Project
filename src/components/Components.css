@@ -144,9 +144,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    display: flex;
     overflow: scroll;
-    justify-content: space-around;
     grid-template-columns: 20% 20% 20%;
   }
   
@@ -158,12 +156,15 @@
     display: none;
   }
 
+.card-info{
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;  
 
+}
   .popup-info{
-    display:grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr ;
-
+    margin-left: auto;
+    margin-right: auto;
   }
   .popup-btn{
     bottom:95%;
@@ -181,10 +182,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    display: flex;
-
     overflow: scroll;
-    justify-content: space-around;
     background: rgba(245, 221, 184, 0.5);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
@@ -209,9 +207,7 @@
   }
 
   .reviewStuff{
-    display:grid;
-    grid-template-columns:  1fr 1fr  ;
-    grid-template-rows: 1fr 1fr 1fr;
+  
   }
   
   .btn:hover {
@@ -243,3 +239,8 @@
     width: auto;
   }
 
+.ReviewCardList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
