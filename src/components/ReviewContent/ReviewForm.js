@@ -91,7 +91,7 @@ const ReviewForm = ({ restaurants, reviewSubmit, loggedInUser }) => {
         <input type="submit" value="submit" />
       </form>
 
-      <img src="https://www.thenews.com.pk/assets/uploads/akhbar/2021-09-02/886708_5297434_Zahir-Jaffer-seeks-legal-assistance-from-US-authorities_akhbar.jpg"/>
+      <img src="https://media.discordapp.net/attachments/913726718169194496/916290019017228338/Screen_Shot_2021_09_30_at_11.png"/>
     </div>
   )
 }
